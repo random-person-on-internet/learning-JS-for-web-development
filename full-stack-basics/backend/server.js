@@ -6,6 +6,8 @@ const app = express();
 //   res.send("Server Ready!!");
 // });
 
+app.use(express.static("dist"));
+
 // get list of 5 jokes
 app.get("/api/jokes", (req, res) => {
   const jokes = [
